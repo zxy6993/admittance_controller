@@ -5,7 +5,7 @@
   <arg name="state_topic_name" default="/ur_robot_state"/>
   <arg name="robot_urdf_name" default="$(find ur_controllers)/config/ur5.urdf"/>
 
-  <arg name="robot_ip" default="192.168.1.100"/>
+  <arg name="robot_ip" default="192.168.1.99"/>
   <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch">
     <arg name="robot_ip" value="$(arg robot_ip)"/>
   </include>
