@@ -1,4 +1,5 @@
-# admittance-control
-Admittance control for UR robot
+## admittance-controller
+Admittance control for UR robot.
 
-## 2025
+## v0.1 2025.10.28
+Rename the pakage name to 'ur_controllers' before catkin make. 

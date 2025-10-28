@@ -1,0 +1,58 @@
+joint_admittance_controller:
+  type: ur_controllers/JointAdmittanceController
+
+  joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+
+  mass: [6, 0, 0, 0, 0, 0,
+         0, 6, 0, 0, 0, 0,
+         0, 0, 6, 0, 0, 0,
+         0, 0, 0, 2, 0, 0,
+         0, 0, 0, 0, 2, 0,
+         0, 0, 0, 0, 0, 2]
+
+  damping: [60,  0,  0,  0,  0,  0,
+             0, 60,  0,  0,  0,  0,
+             0,  0, 60,  0,  0,  0,
+             0,  0,  0, 50,  0,  0,
+             0,  0,  0,  0, 50,  0,
+             0,  0,  0,  0,  0, 50]
+
+  stiffness: [60,  0,  0,  0,  0,  0,
+               0, 60,  0,  0,  0,  0,
+               0,  0, 60,  0,  0,  0,
+               0,  0,  0, 20,  0,  0,
+               0,  0,  0,  0, 20,  0,
+               0,  0,  0,  0,  0, 20]
+
+  # wrench_transform: [0, 1, 0, 0, 0, 0,
+  #                    0, 0, 1, 0, 0, 0,
+  #                    1, 0, 0, 0, 0, 0, 
+  #                    0, 0, 0, 0, 1, 0,
+  #                    0, 0, 0, 0, 0, 1,
+  #                    0, 0, 0, 1, 0, 0]
+
+  gripper_mass: 1.35637 # 1.75
+
+  gripper_com: [0.00042, -0.01111, 0.04239]
+
+  gravity: 9.80665
+
+  wrench_bias: [0.0, 0.5, 12.0, 0.0, 0.0, 0.0]
+
+  state_publish_rate: 125
+
+  max_twist: 1.5
+
+  max_dq: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+  min_dq: [5.0e-3, 5.0e-3, 5.0e-3, 5.0e-3, 5.0e-3, 5.0e-3]
+
+  max_ddq: [0.8, 0.8, 0.8, 0.6, 0.6, 0.6]
+
+  wrench_dead_zone_thres: [5.0, 5.0, 5.0, 0.5, 0.5, 0.5]

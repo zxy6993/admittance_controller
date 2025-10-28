@@ -1,0 +1,7 @@
+<library path="lib/libur_controllers">
+  <class name="ur_controllers/JointAdmittanceController" type="ur_controllers::JointAdmittanceController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      A controller that control ur with admittance control law
+    </description>
+  </class>
+</library>
