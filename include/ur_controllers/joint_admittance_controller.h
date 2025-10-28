@@ -118,8 +118,6 @@ private:
     double gripper_mass_;  // gripper mass
     Vector3d gripper_com_; // gripper center of mass position (relative to FT sensor frame)
 
-    // Publish current robot controller state which high-level planner will use. 
-    // This method is realtime-safe and is meant to be called from update().
     void publishRobotState(const ros::Time& time);
 
     // Utility functions
